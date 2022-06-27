@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@* Link ile html dosyası ve c# dosyası yani view ile controller birbileri ile haberleşiyor. *@
+@* MVC default route yani sayfa yönlendirme yapısı controler/action/id? route pattern ile haberleşmemizi sağlar. *@
+<a asp-action="Index" asp-controller="User"> User Listesi</a>
+<a asp-action="Create" asp-controller="User">User Create</a>
+

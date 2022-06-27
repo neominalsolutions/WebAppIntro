@@ -1,0 +1,22 @@
+﻿@model User
+
+
+@*Fluent API validation *@
+
+
+@*  <partial name="_ValidationScriptsPartial">*@
+
+<div style="height:1200px"></div>
+
+<form method="post">
+
+  <div asp-validation-summary="All"></div>
+
+  <input type="text" asp-for="Name" />
+  <span asp-validation-for="Name"></span>
+  <br />
+  <input type="text" asp-for="SurName" />
+    <span asp-validation-for="SurName"></span>
+  <br />
+  <input type="submit" value="Create User" />
+</form>

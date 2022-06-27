@@ -1,0 +1,26 @@
+﻿
+@model List<User>
+
+
+@*   <partial name="_ValidationScriptsPartial">*@
+
+
+  @* 
+    @model ile sayfada kullanacağımız tipe intellisense ile bağlanırız.
+    Model ise özel bir isimlendirme controllerdan view'e gönderilen modeli temsil ediyor.
+    Buradaki dinamik view oluşturan bu engine razor view engine ismini veriyoruz.
+    <php> <%>
+    Bu dosya hem c# hemde html css js yazabileceğiniz bir dosya cshtml uzantılı.
+  *@
+
+
+<ul>
+
+  @foreach (var item in Model)
+  {
+    <li>
+      @item.Name @item.SurName
+    </li>
+  };
+
+</ul>
