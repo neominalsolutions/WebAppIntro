@@ -7,11 +7,13 @@ namespace WebAppIntro.Controllers
   {
 
     [HttpGet]
-    public IActionResult Index()
+    public IActionResult Index(int? pageSize)
     {
       var data = new List<User>();
       data.Add(new User { Name = "Ali", SurName = "Tan" });
       data.Add(new User { Name = "Ayşe", SurName = "Can" });
+
+      ViewBag.pageSize = pageSize ?? 1;
 
       return View(data);
     }

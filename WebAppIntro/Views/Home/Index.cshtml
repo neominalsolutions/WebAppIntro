@@ -1,11 +1,23 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewBag.Title = "Home Page";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
+    <h1 class="display-4 text-danger" >Welcome5</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+
+<p>
+  @ViewBag.Description <i class="fa fa-home"></i>
+</p>
+
+<p>
+  ViewData @ViewData["Message"]
+</p>
+
+<a asp-action="Redirect" asp-controller="Home">Redirect</a>
+<a asp-action="Index" asp-controller="Home" asp-area="ik">IK Home</a>
+<a asp-action="Users" asp-controller="Home" asp-area="ik">IK Users</a>
 
 @* Link ile html dosyası ve c# dosyası yani view ile controller birbileri ile haberleşiyor. *@
 @* MVC default route yani sayfa yönlendirme yapısı controler/action/id? route pattern ile haberleşmemizi sağlar. *@
